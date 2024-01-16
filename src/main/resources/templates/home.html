@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>Home page for spring app</h1>
+    <img th:src="@{/img/logo.jpg}" alt="" height="50px">
+<li th:each="product: ${products}">
+    id - <span th:text="${product.id}"/> <br>
+    name - <span th:text="${product.name}"/> <br>
+    price - <span th:text="${product.price}"/> <br>
+</li>
+<a href="/form">form</a>
+</body>
+</html>

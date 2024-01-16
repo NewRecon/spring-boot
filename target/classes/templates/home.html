@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>Home page for spring app</h1>
+    <img th:src="@{/img/logo.jpg}" alt="" height="50px">
+<!--    <form th:object="product: ${products}}">-->
+<!--        <fieldset>-->
+<!--            id - <input type="text"> <br>-->
+<!--            name - <input type="text"> <br>-->
+<!--            price - <input type="text"> <br>-->
+<!--            <input type="submit">-->
+<!--        </fieldset>-->
+<!--    </form>-->
+<li th:each="product: ${products}">
+    id - <span th:text="${product.id}"/>
+    name - <span th:text="${product.name}"/>
+    price - <span th:text="${product.price}"/>
+</li>
+<a href="/form">form</a>
+</body>
+</html>
